@@ -1,9 +1,0 @@
-INDEX VERSION 1.4+C:\SPRK Technologies\adv_java_b2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2829288814.index
-2539439812.index
-2655972734.index
-2655972734.index
-593656606.index
-3579972312.index
-3925018483.index
-2033349457.index
