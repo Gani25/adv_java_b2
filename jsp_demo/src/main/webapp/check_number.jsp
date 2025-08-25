@@ -35,12 +35,12 @@
 		if (functionResponse.getCount() == 2) {
 			out.print("<p style='color:green;'>Number = " + num
 					+ " is a <span style='font-weight:bold'>prime number</span></p>");
-			out.print("<p style='color:green; font-weight:bold;'>Factors Are<br>"+functionResponse.getFactors()+"</p>");
+			out.print("<p style='color:green; font-weight:bold;'>Factors Are:<br>"+functionResponse.getFactors()+"</p>");
 
 		} else {
 			out.print("<p>Number = " + num
 					+ " is <span style='font-weight:bold; color:red'>not a prime number</span></p>");
-			out.print("<p style='color:red; font-weight:bold;'>Factors Are<br>"+functionResponse.getFactors()+"</p>");
+			out.print("<p style='color:red; font-weight:bold;'>Factors Are:<br>"+functionResponse.getFactors()+"</p>");
 
 		}
 			}
