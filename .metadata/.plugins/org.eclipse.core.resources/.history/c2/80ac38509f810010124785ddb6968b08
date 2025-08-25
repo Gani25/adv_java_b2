@@ -1,0 +1,55 @@
+<%@page import="com.sprk.FunctionUtils"%>
+<%@page import="java.util.regex.Pattern"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prime Or Not</title>
+</head>
+<body>
+	<h1 style="text-align: center">Prime Or Not</h1>
+	<hr>
+	<%
+	String numStr = request.getParameter("number");
+	%>
+	<form action="#">
+		<label for="num">Number<span style="color:red">*</span>: </label> <input type="text" id="num"
+			name="number" value="<%=numStr == null? \"\":numStr %>" placeholder="Enter a number to check prime or not">
+		<br> <br> <input type="submit" value="Check">
+	</form>
+
+	<%
+	
+	if (numStr != null && !numStr.isBlank()) {
+		out.print("<hr>");
+		int num;
+		if (Pattern.matches("^\\d+$", numStr)) {
+			num = Integer.parseInt(numStr);
+			if (num <= 0) {
+		out.print("<p style='color:red;'>Enter Positive Number Greater Than 0 To Check Prime Or Not</p>");
+			} else {
+		if (FunctionUtils.isPrime(num)) {
+			out.print("<p style='color:green;'>Number = " + num
+					+ " is a <span style='font-weight:bold'>prime number</span></p>");
+
+		} else {
+			out.print("<p>Number = " + num
+					+ " is <span style='font-weight:bold; color:red'>not a prime number</span></p>");
+
+		}
+			}
+		} else {
+			out.print("<p style='color:red;'>Enter Positive Number Only</p>");
+		}
+
+	}else{
+		if(numStr != null && numStr.isBlank()){
+			out.print("<p style='color:red;'>Enter Number First</p>");
+			
+		}
+	}
+	%>
+</body>
+</html>

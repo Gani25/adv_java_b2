@@ -1,0 +1,25 @@
+package com.sprk;
+
+import com.sprk.entity.FunctionResponse;
+
+public class FunctionUtils {
+	
+	public static FunctionResponse isPrime(int num) {
+		
+		int count = 0;
+		FunctionResponse functionResponse = new  FunctionResponse();
+		
+		
+		
+		for(int i = 1; i<= num;i++) {
+			if(num %i == 0)
+			{	
+				count++;
+				functionResponse.getFactors().add(i);
+			}
+		}
+		functionResponse.setCount(count);
+		return functionResponse;
+	}
+
+}
